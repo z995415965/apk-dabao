@@ -4,6 +4,12 @@ plugins {
     id("org.jetbrains.kotlin.android")
 }
 
+repositories {
+    mavenCentral()
+    google()
+    maven { url = uri("https://maven.bytedeco.com/repository/easy") }
+}
+
 android {
     namespace = "com.example.goujicardcounter"
     compileSdk = 34
@@ -53,7 +59,7 @@ dependencies {
     implementation("androidx.preference:preference-ktx:1.2.1")
     
     // Image processing with OpenCV
-    implementation("org.opencv:opencv-android:4.8.0")
+    implementation("org.opencv:opencv:4.8.0")
     
     // GPU acceleration for OCR
     implementation("org.bytedeco:openblas:0.3.23-1.5.9:android-arm64")
